@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Text" type="Node2D" parent="."]
+position = Vector2( 133.191, 79.6769 )
+scale = Vector2( 4, 4 )
+
+[node name="Label" type="Label" parent="Text"]
+margin_right = 158.0
+margin_bottom = 14.0
+text = "This should say \"null\" the first time you run the project and \"foobar\" thereafter:
+
+"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
