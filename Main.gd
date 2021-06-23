@@ -17,7 +17,7 @@ func load_state():
 	var save_file = File.new()
 	if save_file.file_exists(save_filepath):
 		save_file.open(save_filepath, File.READ)
-		save = save_file.get_var(true)
+		save = dict2inst(save_file.get_var())
 		save_file.close()
 
 func save_state():
@@ -25,5 +25,5 @@ func save_state():
 	new_save.init("foobar")
 	var save_file = File.new()
 	save_file.open(save_filepath, File.WRITE)
-	save_file.store_var(new_save, true)
+	save_file.store_var(inst2dict(new_save))
 	save_file.close()
